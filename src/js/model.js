@@ -1,5 +1,3 @@
-"strict mode";
-
 import { async } from "regenerator-runtime";
 
 export const state = {
@@ -25,7 +23,6 @@ export const loadRecipe = async function (id) {
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
-    console.log(state.recipe);
   } catch (error) {
     console.log(error);
   }
