@@ -1,5 +1,8 @@
 "strict mode";
 import icons from "url:../img/icons.svg";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import * as model from "./model.js";
 
 const recipeContainer = document.querySelector(".recipe");
 
@@ -15,27 +18,27 @@ const timeout = function (s) {
 
 ///////////////////////////////////////
 
+const renderSpinner = (parentEl) => {
+  const markup = `
+      <div class="spinner">
+        <svg>
+          <use href="${icons}#icon-loader"></use>
+        </svg>
+      </div>
+        `;
+  parentEl.innerHTML = "";
+  parentEl.insertAdjacentHTML("afterbegin", markup);
+};
+
 const showRecipe = async () => {
   try {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+
+    renderSpinner(recipeContainer);
     // 1.) Loading Recipe
-    const response = await fetch(
-      "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886"
-      // "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bcd86"
-    );
-    const data = await response.json();
-    if (!response.ok) throw new Error(`${data.message} (${response.status})`);
-    let { recipe } = data.data;
-    recipe = {
-      id: recipe.id,
-      title: recipe.title,
-      publisher: recipe.publisher,
-      sourceuRL: recipe.source_url,
-      image: recipe.image_url,
-      servings: recipe.servings,
-      cookingTime: recipe.cooking_time,
-      ingredients: recipe.ingredients,
-    };
-    console.log(recipe);
+    await model.loadRecipe(id);
+    const { recipe } = model.state;
 
     // 2.) Rendering recipe
     const markup = `
@@ -51,7 +54,7 @@ const showRecipe = async () => {
         <div class="recipe__details">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href=${icons}#icon-clock"></use>
+              <use href="${icons}#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${
               recipe.cookingTime
@@ -83,7 +86,7 @@ const showRecipe = async () => {
 
           <div class="recipe__user-generated">
             <svg>
-              <use href=${icons}#icon-user"></use>
+              <use href="${icons}#icon-user"></use>
             </svg>
           </div>
           <button class="btn--round">
@@ -103,7 +106,7 @@ const showRecipe = async () => {
             return `
           <li class="recipe__ingredient">
                       <svg class="recipe__icon">
-                        <use href=${icons}#icon-check"></use>
+                        <use href="${icons}#icon-check"></use>
                       </svg>
                       <div class="recipe__quantity">${
                         ingredients.quantity || ""
@@ -135,7 +138,7 @@ const showRecipe = async () => {
           >
             <span>Directions</span>
             <svg class="search__icon">
-              <use href=${icons}#icon-arrow-right"></use>
+              <use href="${icons}#icon-arrow-right"></use>
             </svg>
           </a>
         </div>
@@ -147,5 +150,4 @@ const showRecipe = async () => {
     console.error(`${error}`);
   }
 };
-
-showRecipe();
+["hashchange", "load"].forEach((ev) => window.addEventListener(ev, showRecipe));
