@@ -28,7 +28,7 @@ const controlRecipes = async () => {
     // 2.) Rendering recipe
     recipeView.render(model.state.recipe);
   } catch (error) {
-    console.error(`${error}`);
+    console.error(error);
   }
 };
 ["hashchange", "load"].forEach((ev) =>

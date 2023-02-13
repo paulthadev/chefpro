@@ -9,6 +9,7 @@ export const getJSON = async function (url) {
 
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error(error);
+    // console.log(error);
   }
 };
