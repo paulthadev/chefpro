@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet" />
   <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="src/sass/main.scss" />
+  <link rel="stylesheet" href="src/sass/main.css" />
   <script defer type="module" src="src/js/controller.js"></script>
 
   <title>forkify || Search over 1,000,000 recipes</title>
@@ -18,7 +18,8 @@
   <div class="container">
     <header class="header">
       <img src="src/img/logo.png" alt="Logo" class="header__logo" />
-      <form class="search">
+      <div class="header-center">
+               <form class="search">
         <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
         <button class="btn search__btn">
           <svg class="search__icon">
@@ -76,6 +77,8 @@
           </li>
         </ul>
       </nav>
+      </div>
+ 
     </header>
 
     <div class="search-results">
