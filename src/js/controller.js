@@ -14,6 +14,9 @@ const controlRecipes = async () => {
     if (!id) return;
 
     recipeViews.renderSpinner();
+    // 0. Load Search Result
+    await model.loadSearchResult("pizza");
+
     // 1.) Loading Recipe
     await model.loadRecipe(id);
 
