@@ -3,7 +3,8 @@
         @media screen and (max-width:600px){
             @content
         }
-    @if($view-port == tab-port){
+    }    
+    @if ($view-port ==tab-port){
            @media screen and (max-width:900px){
             @content
            }
@@ -13,6 +14,5 @@
                 @content
             }
         }
-        
-    }
+    
 }

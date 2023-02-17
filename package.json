@@ -19,7 +19,7 @@
     "process": "^0.11.10"
   },
   "dependencies": {
-    "core-js": "^3.27.2",
+    "core-js": "^3.28.0",
     "fractional": "^1.0.0",
     "regenerator-runtime": "^0.13.11"
   }

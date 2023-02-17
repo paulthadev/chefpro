@@ -34,7 +34,7 @@ body {
   max-width: 120rem;
   min-height: 117rem;
   margin: 4vw auto;
-  background-color: #fff;
+  background-color: #f7f7f7;
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba(97, 85, 81, 0.2);
@@ -238,6 +238,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+.header__center {
+  display: flex;
+  gap: 4rem;
 }
 .header__logo {
   margin-left: 4rem;
@@ -451,6 +461,12 @@ body {
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
+  background-color: white;
+}
+@media screen and (max-width: 900px) {
+  .search-results {
+    margin-top: 6rem;
+  }
 }
 
 .results {
@@ -487,6 +503,7 @@ body {
 
 .recipe {
   background-color: #f9f5f3;
+  margin-top: 3rem;
 }
 .recipe__fig {
   height: 32rem;

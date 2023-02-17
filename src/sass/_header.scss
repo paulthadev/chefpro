@@ -4,6 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  @include respond(tab-port){
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__center {
+    display: flex;
+    gap: 4rem;
+
+  }
 
   &__logo {
     margin-left: 4rem;
@@ -32,6 +42,7 @@
     color: inherit;
     font-size: 1.7rem;
     width: 30rem;
+   
 
     &:focus {
       outline: none;
