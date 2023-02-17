@@ -42,7 +42,13 @@
     color: inherit;
     font-size: 1.7rem;
     width: 30rem;
-   
+    @include respond(phone){
+      width: 10rem !important;
+    }
+    @media screen and (max-width:485px){
+      width: 5rem  !important;
+    }
+  
 
     &:focus {
       outline: none;
@@ -64,6 +70,16 @@
   &__btn {
     font-weight: 600;
     font-family: inherit;
+     @include respond(phone){
+      padding:0.85rem 1.2rem;
+      font-size: 1.3rem;
+
+    }
+     @media screen and (max-width:416px){
+      & span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -93,9 +109,13 @@
     cursor: pointer;
     padding: 0 1.5rem;
     transition: all 0.3s;
-
     display: flex;
     align-items: center;
+    @media screen and (max-width:485px){
+      padding: 0 1.3rem;
+      font-size: 1.2rem;
+    }
+   
 
     svg {
       height: 2.4rem;
@@ -128,6 +148,9 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s 0.2s;
+  @include respond(phone){
+    width: 30rem;
+  }
 
   &__list {
     list-style: none;
