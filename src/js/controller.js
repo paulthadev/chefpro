@@ -7,6 +7,10 @@ import recipeViews from "./views/recipeViews.js";
 import searchViews from "./views/searchViews.js";
 import resultsView from "./views/resultsView.js";
 
+if (module.hot) {
+  module.hot.accept();
+}
+
 const controlRecipes = async () => {
   try {
     const id = window.location.hash.slice(1);
@@ -37,7 +41,6 @@ const controlSearchResults = async function () {
     await model.loadSearchResult(query);
 
     // Render Results
-    console.log(model.state.search.query, model.state.search.results);
     resultsView.render(model.state.search.results);
   } catch (error) {
     console.log(error);
