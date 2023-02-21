@@ -20,7 +20,6 @@ class PaginationView extends Views {
       this._data.results.length / this._data.resultPerPage
     );
 
-    console.log(numPages);
     // 1. Page 1 and other pages
     if (currPage === 1 && numPages > 1) {
       return `
