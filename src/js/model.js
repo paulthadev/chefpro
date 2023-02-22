@@ -1,5 +1,5 @@
 import { async } from "regenerator-runtime";
-import { API_URL, RES_PER_PAGE } from "./config.js";
+import { API_URL, RES_PER_PAGE, DEF_SERVINGS } from "./config.js";
 import { getJSON } from "./helpers.js";
 
 export const state = {
@@ -22,7 +22,7 @@ export const loadRecipe = async function (id) {
       publisher: recipe.publisher,
       sourceuRL: recipe.source_url,
       image: recipe.image_url,
-      servings: recipe.servings,
+      servings: (recipe.servings = DEF_SERVINGS),
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
