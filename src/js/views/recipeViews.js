@@ -124,7 +124,7 @@ class RecipeView extends Views {
                       </svg>
                       <div class="recipe__quantity">${
                         ingredients.quantity
-                          ? new fracty(ingredients.quantity).toString()
+                          ? fracty(ingredients.quantity).toString()
                           : ""
                       }</div>
                       <div class="recipe__description">
