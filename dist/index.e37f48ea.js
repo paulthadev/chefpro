@@ -628,7 +628,7 @@ const init = function() {
 };
 init();
 
-},{"core-js/modules/es.regexp.flags.js":"gSXXb","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./views/recipeViews.js":"fR5Tr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./views/searchViews.js":"3TF3w","./views/resultsView.js":"cSbZE","./views/paginationView.js":"6z7bi"}],"gSXXb":[function(require,module,exports) {
+},{"core-js/modules/es.regexp.flags.js":"gSXXb","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime":"dXNgZ","regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./views/recipeViews.js":"fR5Tr","./views/searchViews.js":"3TF3w","./views/resultsView.js":"cSbZE","./views/paginationView.js":"6z7bi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gSXXb":[function(require,module,exports) {
 var global = require("1a47be3a167ea181");
 var DESCRIPTORS = require("8511d17280849458");
 var defineBuiltInAccessor = require("9c791f4cf5587fc5");
@@ -2672,7 +2672,20 @@ const updateServings = function(newServings) {
     state.recipe.servings = newServings;
 };
 
-},{"regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config.js":"k5Hzs","./helpers.js":"hGI1E"}],"gkKU3":[function(require,module,exports) {
+},{"regenerator-runtime":"dXNgZ","./config.js":"k5Hzs","./helpers.js":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
+parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
+parcelHelpers.export(exports, "DEF_SERVINGS", ()=>DEF_SERVINGS);
+const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes/";
+const TIMEOUT_SEC = 10;
+const RES_PER_PAGE = 10;
+const DEF_SERVINGS = 1; ///////////////////////////////////////
+ // https://forkify-api.herokuapp.com/v2
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -2702,20 +2715,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"k5Hzs":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "API_URL", ()=>API_URL);
-parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
-parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
-parcelHelpers.export(exports, "DEF_SERVINGS", ()=>DEF_SERVINGS);
-const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes/";
-const TIMEOUT_SEC = 10;
-const RES_PER_PAGE = 10;
-const DEF_SERVINGS = 1; ///////////////////////////////////////
- // https://forkify-api.herokuapp.com/v2
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hGI1E":[function(require,module,exports) {
+},{}],"hGI1E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getJSON", ()=>getJSON);
@@ -2743,7 +2743,7 @@ const getJSON = async function(url) {
     }
 };
 
-},{"regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config.js":"k5Hzs"}],"fR5Tr":[function(require,module,exports) {
+},{"regenerator-runtime":"dXNgZ","./config.js":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fR5Tr":[function(require,module,exports) {
 // "strict mode";
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -2867,7 +2867,7 @@ class RecipeView extends (0, _viewsDefault.default) {
 }
 exports.default = new RecipeView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","url:../../img/icons.svg":"loVOp","./views":"8t69M","fracty":"hJO4d"}],"loVOp":[function(require,module,exports) {
+},{"url:../../img/icons.svg":"loVOp","fracty":"hJO4d","./views":"8t69M","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"loVOp":[function(require,module,exports) {
 module.exports = require("ae3e90cb53758eab").getBundleURL("hWUTQ") + "icons.dfd7a6db.svg" + "?" + Date.now();
 
 },{"ae3e90cb53758eab":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -2904,83 +2904,7 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"8t69M":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
-class Views {
-    _data;
-    render(data) {
-        this._data = data;
-        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
-        const markup = this._generateMarkup();
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    update(data) {
-        this._data = data;
-        const newMarkup = this._generateMarkup();
-        const newDOM = document.createRange().createContextualFragment(newMarkup);
-        const newElements = Array.from(newDOM.querySelectorAll("*"));
-        const curElements = Array.from(this._parentElement.querySelectorAll("*"));
-        newElements.forEach((newEl, i)=>{
-            const curEl = curElements[i];
-            // Updates changed TEXT
-            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== "") curEl.textContent = newEl.textContent;
-            // Updates changed ATTRIBUES
-            if (!newEl.isEqualNode(curEl)) Array.from(newEl.attributes).forEach((attr)=>curEl.setAttribute(attr.name, attr.value));
-        });
-    }
-    _clear() {
-        this._parentElement.innerHTML = "";
-    }
-    renderSpinner() {
-        const markup = `
-      <div class="spinner">
-        <svg>
-          <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>npm i fractional
-        </svg>
-      </div>
-        `;
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    renderError(message = this._errorMessage) {
-        const markup = `
-          <div class="error">
-            <div>
-              <svg>
-                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
-              </svg>
-            </div>
-            <p>${message}</p>
-          </div>
-    `;
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    renderMessage(message = this._message) {
-        const markup = `
-          <div class="message">
-            <div>
-              <svg>
-                <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
-              </svg>
-            </div>
-            <p>${message}</p>
-          </div>
-    `;
-        this._clear();
-        this._parentElement.insertAdjacentHTML("afterbegin", markup);
-    }
-    full() {
-        return `${this._data}`;
-    }
-}
-exports.default = Views;
-
-},{"url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hJO4d":[function(require,module,exports) {
+},{}],"hJO4d":[function(require,module,exports) {
 // FRACTY CONVERTS DECIMAL NUMBERS TO FRACTIONS BY ASSUMING THAT TRAILING PATTERNS FROM 10^-2 CONTINUE TO REPEAT
 // The assumption is based on the most standard numbering conventions
 // e.g. 3.51 will convert to 3 51/100 while 3.511 will convert to 3 23/45
@@ -3075,7 +2999,83 @@ function returnStrings(den, num, integer, type) {
     else return `${type}${integer} ${num}/${den}`; //If there's an integer and a fraction return both.
 }
 
-},{}],"3TF3w":[function(require,module,exports) {
+},{}],"8t69M":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+class Views {
+    _data;
+    render(data) {
+        this._data = data;
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
+        const markup = this._generateMarkup();
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    update(data) {
+        this._data = data;
+        const newMarkup = this._generateMarkup();
+        const newDOM = document.createRange().createContextualFragment(newMarkup);
+        const newElements = Array.from(newDOM.querySelectorAll("*"));
+        const curElements = Array.from(this._parentElement.querySelectorAll("*"));
+        newElements.forEach((newEl, i)=>{
+            const curEl = curElements[i];
+            // Updates changed TEXT
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== "") curEl.textContent = newEl.textContent;
+            // Updates changed ATTRIBUES
+            if (!newEl.isEqualNode(curEl)) Array.from(newEl.attributes).forEach((attr)=>curEl.setAttribute(attr.name, attr.value));
+        });
+    }
+    _clear() {
+        this._parentElement.innerHTML = "";
+    }
+    renderSpinner() {
+        const markup = `
+      <div class="spinner">
+        <svg>
+          <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>npm i fractional
+        </svg>
+      </div>
+        `;
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    renderError(message = this._errorMessage) {
+        const markup = `
+          <div class="error">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>
+    `;
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    renderMessage(message = this._message) {
+        const markup = `
+          <div class="message">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>
+    `;
+        this._clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    full() {
+        return `${this._data}`;
+    }
+}
+exports.default = Views;
+
+},{"url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3TF3w":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class SearchViews {
@@ -3131,7 +3131,7 @@ class ResultsView extends (0, _viewsDefault.default) {
 }
 exports.default = new ResultsView();
 
-},{"./views":"8t69M","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6z7bi":[function(require,module,exports) {
+},{"url:../../img/icons.svg":"loVOp","./views":"8t69M","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6z7bi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg");
