@@ -1,4 +1,4 @@
-7837
+7839
 140C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\@jridgewell\trace-mapping\dist\types\types.d.ts133200928373714442 0
 92C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\package.json133215530393562240 0
 114C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\css-tree\package.json133200928448096379 0
@@ -12,7 +12,7 @@
 119C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\@parcel\runtime-js\LICENSE133200928320970027 0
 113C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\features\set133202924950912051 1
 124C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\caniuse-lite\data\regions\FI.js133200928474555792 0
-90C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\.gitignore133215535602122919 0
+90C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\.gitignore133215545600901466 0
 118C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\svgo\plugins\prefixIds.js133200928405779482 0
 131C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\full\array\virtual\group-by.js133202924863307374 0
 119C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\lightningcss\node\ast.d.ts133200928373463720 0
@@ -29,7 +29,7 @@
 124C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\weak-lru-cache\rollup.config.js133200928337759052 0
 83C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\src133200945911797600 1
 125C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\es\array\virtual\push.js133202924901020419 0
-84C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist133215533663927092 1
+84C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist133215540291146087 1
 139C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\@babel\highlight\node_modules\has-flag\license133200928324747811 0
 125C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\src\architecture\forkify-flowchart-part-2.png132886955210000000 0
 124C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\full\string\trim-end.js133202924946353660 0
@@ -1009,6 +1009,7 @@
 124C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\actual\iterator\take.js133202924926985181 0
 115C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\yaml\browser\schema.js133200928401920726 0
 114C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\posthtml\lib\index.js133200928325450068 0
+102C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.ee01f207.js133215540290796072 0
 127C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\svgo\plugins\removeStyleElement.js133200928415770384 0
 121C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\.bin\node-gyp-build-test.cmd133200928509634670 0
 110C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\nth-check\LICENSE133200928313951240 0
@@ -5083,7 +5084,7 @@
 123C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\es\typed-array\sort.js133202924920845388 0
 120C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\full\reflect\get.js133202924862676127 0
 122C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\full\reflect\index.js133202924876009016 0
-95C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.html133215533663146999 0
+95C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.html133215540290776072 0
 137C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\features\string\virtual\trim-left.js133202924947204959 0
 125C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\core-js\full\reflect\metadata.js133202924892840557 0
 125C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\node_modules\@parcel\events\src\Disposable.js133200928326455845 0
@@ -7833,6 +7834,7 @@
 105C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\favicon.8b2f57bf.png133215533662687016 0
 103C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\icons.21bad73c.svg133215533663137006 0
 102C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.62406edb.js133202851148873789 0
+106C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.ee01f207.js.map133215540291126092 0
 103C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\index.f7626f62.css133215533662206917 0
 102C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\logo.726d37a8.png133215533662766992 0
 102C:\Users\DORCAS\Documents\Personal\LEARNING\Project FIles\Javascript\18-forkify\dist\logo.8a7af738.png133215524940227942 0
