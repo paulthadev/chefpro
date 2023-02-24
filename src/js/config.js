@@ -3,5 +3,5 @@ export const TIMEOUT_SEC = 10;
 export const RES_PER_PAGE = 10;
 export const DEF_SERVINGS = 1;
 
-///////////////////////////////////////
+/// API DATABASE///////////////////
 // https://forkify-api.herokuapp.com/v2
