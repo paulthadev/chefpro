@@ -73,7 +73,8 @@ const controlServings = function (newServings) {
 
 const controlAddBookmark = function () {
   // Render bookmark
-  model.addBookmark(model.state.recipe);
+  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+  else model.deleteBookmark(model.state.recipe.id);
 
   // Update the recipe when bookmarked
   recipeViews.update(model.state.recipe);
