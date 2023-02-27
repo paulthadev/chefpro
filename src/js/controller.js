@@ -7,6 +7,7 @@ import recipeViews from "./views/recipeViews.js";
 import searchViews from "./views/searchViews.js";
 import resultsView from "./views/resultsView.js";
 import paginationView from "./views/paginationView.js";
+import bookmarksViews from "./views/bookmarksViews.js";
 
 // if (module.hot) {
 //   module.hot.accept();
@@ -72,12 +73,15 @@ const controlServings = function (newServings) {
 };
 
 const controlAddBookmark = function () {
-  // Render bookmark
+  //1.) Add/ Remove bookmark
   if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
   else model.deleteBookmark(model.state.recipe.id);
 
-  // Update the recipe when bookmarked
+  //2.) Update the recipeview that is bookmarked
   recipeViews.update(model.state.recipe);
+
+  // 3.) Render the Bookmark
+  bookmarksViews.render(model.state.bookmark);
 };
 
 const init = function () {
