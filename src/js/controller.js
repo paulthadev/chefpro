@@ -7,7 +7,7 @@ import recipeViews from "./views/recipeViews.js";
 import searchViews from "./views/searchViews.js";
 import resultsView from "./views/resultsView.js";
 import paginationView from "./views/paginationView.js";
-import bookmarksViews from "./views/bookmarksViews.js";
+import bookmarksViews from "./views/bookmarksView.js";
 
 // if (module.hot) {
 //   module.hot.accept();
@@ -85,7 +85,12 @@ const controlAddBookmark = function () {
   bookmarksViews.render(model.state.bookmark);
 };
 
+const controlBookmark = function () {
+  bookmarksViews.render(model.state.bookmark);
+};
+
 const init = function () {
+  bookmarksViews.addHandlerRender(controlBookmark);
   recipeViews.addHandlerRender(controlRecipes);
   recipeViews.addHandlerUpdateServings(controlServings);
   recipeViews.addHandlerAddBookmark(controlAddBookmark);
