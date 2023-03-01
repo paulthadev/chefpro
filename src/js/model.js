@@ -108,3 +108,33 @@ const clearBookmarks = function () {
   localStorage.clear("bookmark");
 };
 // clearBookmarks()
+
+export const uploadRecipe = async function (newRecipe) {
+  try {
+    const ingredients = Object.entries(newRecipe)
+      .filter((entry) => entry[0].startsWith("ingredient") && entry[1] !== "")
+      .map((ing) => {
+        const ingArr = ing[1].replaceAll(" ", "").split(",");
+
+        if (ingArr.length !== 3)
+          throw new Error(
+            "Wrong ingredient format! Please use the correct format :)"
+          );
+
+        const [quantity, unit, descripton] = ingArr;
+        return { quantity: quantity ? +quantity : null, unit, descripton };
+      });
+    const recipe = {
+      title: newRecipe.title,
+      source_Url: newRecipe.sourceUrl,
+      image_Url: newRecipe.image,
+      publisher: newRecipe.publisher,
+      cooking_time: +newRecipe.cookingTime,
+      servings: newRecipe.servings,
+      ingredients,
+    };
+    console.log(recipe);
+  } catch (error) {
+    throw error;
+  }
+};
