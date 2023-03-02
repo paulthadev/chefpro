@@ -1,6 +1,12 @@
 import { async } from "regenerator-runtime";
-import { API_URL, RES_PER_PAGE, DEF_SERVINGS, DEF_PAGE } from "./config.js";
-import { getJSON } from "./helpers.js";
+import {
+  API_URL,
+  RES_PER_PAGE,
+  DEF_SERVINGS,
+  DEF_PAGE,
+  KEY,
+} from "./config.js";
+import { getJSON, sendJSON } from "./helpers.js";
 
 export const state = {
   recipe: {},
@@ -102,7 +108,6 @@ const init = function () {
   if (storage) state.bookmark = JSON.parse(storage);
 };
 init();
-console.log(state.bookmark);
 
 const clearBookmarks = function () {
   localStorage.clear("bookmark");
@@ -121,19 +126,23 @@ export const uploadRecipe = async function (newRecipe) {
             "Wrong ingredient format! Please use the correct format :)"
           );
 
-        const [quantity, unit, descripton] = ingArr;
-        return { quantity: quantity ? +quantity : null, unit, descripton };
+        const [quantity, unit, description] = ingArr;
+
+        return { quantity: quantity ? +quantity : null, unit, description };
       });
+
     const recipe = {
       title: newRecipe.title,
-      source_Url: newRecipe.sourceUrl,
-      image_Url: newRecipe.image,
+      source_url: newRecipe.sourceUrl,
+      image_url: newRecipe.image,
       publisher: newRecipe.publisher,
       cooking_time: +newRecipe.cookingTime,
-      servings: newRecipe.servings,
+      servings: +newRecipe.servings,
       ingredients,
     };
-    console.log(recipe);
+
+    const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+    console.log(data);
   } catch (error) {
     throw error;
   }
