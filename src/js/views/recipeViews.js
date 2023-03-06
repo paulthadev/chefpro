@@ -1,6 +1,6 @@
 // "strict mode";
 import icons from "url:../../img/icons.svg";
-import { Fraction } from "fractional";
+import fracty from "fracty";
 import Views from "./views";
 
 class RecipeView extends Views {
@@ -8,10 +8,28 @@ class RecipeView extends Views {
   _errorMessage = "We couldn't find that recipe. Please Try another one!";
   _message = "";
 
-  addHandleRender(handler) {
+  addHandlerRender(handler) {
     ["hashchange", "load"].forEach((ev) =>
       window.addEventListener(ev, handler)
     );
+  }
+
+  addHandlerUpdateServings(handler) {
+    this._parentElement.addEventListener("click", function (e) {
+      const btn = e.target.closest(".btn--update-servings");
+      if (!btn) return;
+
+      const { updateTo } = btn.dataset;
+      if (+updateTo > 0) handler(+updateTo);
+    });
+  }
+
+  addHandlerAddBookmark(handler) {
+    this._parentElement.addEventListener("click", function (e) {
+      const btn = e.target.closest(".btn--bookmark");
+      if (!btn) return;
+      handler();
+    });
   }
 
   _generateMarkup() {
@@ -45,12 +63,16 @@ class RecipeView extends Views {
             <span class="recipe__info-text">servings</span>
 
             <div class="recipe__info-buttons">
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--update-servings" data-update-to="${
+                this._data.servings - 1
+              }">
                 <svg>
                   <use href="${icons}#icon-minus-circle"></use>
                 </svg>
               </button>
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--update-servings" data-update-to="${
+                this._data.servings + 1
+              }">
                 <svg>
                   <use href="${icons}#icon-plus-circle"></use>
                 </svg>
@@ -63,9 +85,11 @@ class RecipeView extends Views {
             <svg> <use href="${icons}#icon-user"></use></svg> 
              -->
           </div>
-          <button class="btn--round">
+          <button class="btn--round btn--bookmark">
             <svg class="">
-              <use href="${icons}#icon-bookmark-fill"></use>
+              <use href="${icons}#icon-bookmark${
+      this._data.bookmarked === true ? "-fill" : ""
+    }"></use>
             </svg>
           </button>
         </div>
@@ -110,7 +134,7 @@ class RecipeView extends Views {
                       </svg>
                       <div class="recipe__quantity">${
                         ingredients.quantity
-                          ? new Fraction(ingredients.quantity).toString()
+                          ? fracty(ingredients.quantity).toString()
                           : ""
                       }</div>
                       <div class="recipe__description">
