@@ -1,7 +1,7 @@
-// "strict mode";
-import "/core-js/stable";
-import { async } from "/regenerator-runtime";
-import "/regenerator-runtime/runtime";
+"strict mode";
+import "core-js/stable";
+import { async } from "regenerator-runtime";
+import "regenerator-runtime/runtime";
 import * as model from "./model.js";
 import recipeViews from "./views/recipeViews.js";
 import searchViews from "./views/searchViews.js";
