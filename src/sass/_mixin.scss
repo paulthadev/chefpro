@@ -1,0 +1,18 @@
+@mixin respond($view-port) {
+    @if ($view-port== phone){
+        @media screen and (max-width:600px){
+            @content
+        }
+    }    
+    @if ($view-port ==tab-port){
+           @media screen and (max-width:900px){
+            @content
+           }
+        }
+        @if($view-port==tab-land){
+            @media screen and (max-width:1200px){
+                @content
+            }
+        }
+    
+}
