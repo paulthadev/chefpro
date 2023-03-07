@@ -113,9 +113,9 @@ const controlAddRecipe = async function (newRecipe) {
     window.history.pushState(null, "", `#${model.state.recipe.id}`);
 
     // close Modal Window
-    setTimeout(function () {
-      addRecipeView.toggleWIndow();
-    }, MODAL_CLOSE_SEC * 1000);
+    // setTimeout(function () {
+    //   addRecipeView.toggleWIndow();
+    // }, MODAL_CLOSE_SEC * 1000);
   } catch (error) {
     addRecipeView.renderError(error.message);
     console.error("💥", error);
