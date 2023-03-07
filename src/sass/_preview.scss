@@ -8,6 +8,7 @@
       transition: all 0.3s;
       border-right: 1px solid #fff;
       text-decoration: none;
+    
     }
 
     &:hover {
@@ -18,7 +19,12 @@
     &--active {
       background-color: $color-grey-light-1;
     }
+    
+    
   }
+    &:not(:last-child){
+          margin-bottom: 2rem;
+      }
 
   &__fig {
     flex: 0 0 5.8rem;

@@ -4,10 +4,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100rem;
+  @include respond (tab-port){
+    width: 70rem;
+  }
+  @include respond (phone){
+    width: 50rem;
+  }
+  @media screen and (max-width:415px){
+    width: 40rem;
+  }
   background-color: white;
   border-radius: 9px;
 
   padding: 5rem 6rem;
+  @include respond (phone){
+    padding: 3rem 4rem;
+  }
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
   transition: all 0.5s;
@@ -46,6 +58,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
+  @include respond(tab-port){
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    overflow-y: scroll;
+  }
 
   &__column {
     display: grid;
@@ -95,5 +113,6 @@
   &__btn {
     grid-column: 1 / -1;
     justify-self: center;
+    display: inline-block;
   }
 }

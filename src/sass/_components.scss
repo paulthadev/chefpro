@@ -1,9 +1,13 @@
+ .btn-round-box {
+  display: block;
+ }
+
 %btn {
   background-image: $gradient;
   border-radius: 10rem;
   border: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffff;
   cursor: pointer;
   display: flex;
   align-items: center;
