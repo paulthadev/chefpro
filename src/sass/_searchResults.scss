@@ -2,17 +2,11 @@
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  @include respond(tab-port){
-    margin-top: 6rem;
-  }
- 
 }
 
 .results {
   list-style: none;
   margin-bottom: 2rem;
-  
 }
 
 .pagination {
