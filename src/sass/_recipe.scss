@@ -1,7 +1,8 @@
 .recipe {
   background-color: $color-grey-light-1;
   margin-top: 3rem;
-
+  flex: 1;
+  
   ///////////
   // FIGURE
   &__fig {
@@ -69,6 +70,9 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+    @media screen and (max-width:465px){
+     padding: 5rem 2rem 2.5rem 4rem;
+    }
   }
 
   &__info {
@@ -79,6 +83,9 @@
 
     &:not(:last-child) {
       margin-right: 4.5rem;
+      @media screen and (max-width:410px){
+        margin-right: 2.5rem;
+      }
     }
   }
 
@@ -98,6 +105,7 @@
     display: flex;
     margin-left: 1.6rem;
     transform: translateY(-1px);
+  
   }
 
   &__user-generated {
@@ -130,6 +138,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // @media screen and (max-width:550px){
+    //   padding: 3rem 5rem;
+    //   font-size: 1.5rem;
+    // }
   }
 
   &__ingredient-list {
@@ -137,6 +149,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem 3rem;
     list-style: none;
+       @media screen and (max-width:550px){
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__ingredient {
@@ -165,6 +181,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+       @media screen and (max-width:550px){
+      // padding: 3rem 5rem;
+    }
   }
 
   &__directions-text {
@@ -172,6 +191,9 @@
     text-align: center;
     margin-bottom: 3.5rem;
     color: $color-grey-dark-2;
+       @media screen and (max-width:550px){
+      font-size: 1.6rem;
+    }
   }
 
   &__publisher {
