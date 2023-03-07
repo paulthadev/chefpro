@@ -17,16 +17,19 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="src/img/logo.png" alt="Logo" class="header__logo" />
-      <form class="search">
-        <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
-        <button class="btn search__btn">
-          <svg class="search__icon">
-            <use href="src/img/icons.svg#icon-search"></use>
-          </svg>
-          <span>Search</span>
-        </button>
-      </form>
+      <div class="header__center">
+        <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+        <form class="search">
+          <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes..." />
+          <button class="btn search__btn">
+            <svg class="search__icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
+
 
       <nav class="nav">
         <ul class="nav__list">
@@ -76,13 +79,18 @@
           </li>
         </ul>
       </nav>
+
+
     </header>
+    <div class="search-result__box">
+      <div class="search-results">
 
-    <div class="search-results">
-      <ul class="results">
+        <ul class="results">
 
-        <!-- 
-          <li class="preview">
+
+
+          <!-- 
+           <li class="preview">
             <a class="preview__link preview__link--active" href="#23456">
               <figure class="preview__fig">
                 <img src="src/img/test-1.jpg" alt="Test" />
@@ -97,12 +105,16 @@
                 </div>
               </div>
             </a>
-          </li>
-           -->
-      </ul>
+          </li> -->
 
-      <div class="pagination">
-        <!-- <button class="btn--inline pagination__btn--prev">
+
+
+
+
+        </ul>
+
+        <div class="pagination">
+          <!-- <button class="btn--inline pagination__btn--prev">
             <svg class="search__icon">
               <use href="src/img/icons.svg#icon-arrow-left"></use>
             </svg>
@@ -114,31 +126,31 @@
               <use href="src/img/icons.svg#icon-arrow-right"></use>
             </svg>
           </button> -->
-      </div>
-
-      <p class="copyright">
-        &copy; Copyright by
-        <a class="twitter-link" target="_blank" href="https://twitter.com/fadayopaul">Paul Fadayo</a>
-      </p>
-    </div>
-
-    <div class="recipe">
-      <div class="message">
-        <div>
-          <svg>
-            <use href="src/img/icons.svg#icon-smile"></use>
-          </svg>
         </div>
-        <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a class="twitter-link" target="_blank" href="https://twitter.com/fadayopaul">Paul Fadayo</a>
+        </p>
       </div>
 
-      <!-- <div class="spinner">
+      <div class="recipe">
+        <div class="message">
+          <div>
+            <svg>
+              <use href="src/img/icons.svg#icon-smile"></use>
+            </svg>
+          </div>
+          <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+        </div>
+        <!-- starting from here -->
+        <!-- <div class="spinner">
           <svg>
             <use href="src/img/icons.svg#icon-loader"></use>
           </svg>
         </div> -->
 
-      <!-- <div class="error">
+        <!-- <div class="error">
             <div>
               <svg>
                 <use href="src/img/icons.svg#icon-alert-triangle"></use>
@@ -147,8 +159,8 @@
             <p>No recipes found for your query. Please try again!</p>
           </div> -->
 
-      <!--
-        <figure class="recipe__fig">
+
+        <!-- <figure class="recipe__fig">
           <img src="src/img/test-1.jpg" alt="Tomato" class="recipe__img" />
           <h1 class="recipe__title">
             <span>Pasta with tomato cream sauce</span>
@@ -189,11 +201,14 @@
               <use href="src/img/icons.svg#icon-user"></use>
             </svg>
           </div>
-          <button class="btn--round">
+          
+             <button class="btn--round">
             <svg class="">
               <use href="src/img/icons.svg#icon-bookmark-fill"></use>
             </svg>
           </button>
+        
+          
         </div>
 
         <div class="recipe__ingredients">
@@ -240,9 +255,11 @@
               <use href="src/img/icons.svg#icon-arrow-right"></use>
             </svg>
           </a>
-        </div>
-        -->
+        </div> -->
+        <!-- end  -->
+      </div>
     </div>
+
   </div>
 
   <div class="overlay hidden"></div>
