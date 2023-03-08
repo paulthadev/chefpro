@@ -14,7 +14,7 @@
   padding: 0 3.5rem;
 
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -30,13 +30,22 @@
 }
 
 .copyright {
-  color: $color-grey-dark-2;
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  color: $color-grey-dark-1;
+  font-size: 1.4rem;
+  font-weight: bold;
   padding: 0 3.5rem;
   margin-top: 4rem;
+  text-align: center;
+
+  .copyright--name {
+    padding: 0 1rem;
+  }
 
   .twitter-link:link,
   .twitter-link:visited {
     color: $color-grey-dark-2;
+    text-decoration: none;
   }
 }
