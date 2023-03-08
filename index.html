@@ -252,15 +252,16 @@
       <div class="upload__column">
         <h3 class="upload__heading">Recipe data</h3>
         <label>Title</label>
-        <input value="RECIPE TITLE" required name="title" type="text" />
+        <input value="" required name="title" type="text" placeholder="RECIPE TITLE" />
         <label>URL</label>
-        <input value="URL" required name="sourceUrl" type="text" />
+        <input value="" required name="sourceUrl" type="text"
+          placeholder="recipe url: 'http://recipe-url-information'" />
         <label>Image URL</label>
-        <input value="IMAGE URL" required name="image" type="text" />
+        <input value="" required name="image" type="text" placeholder="image url: 'http://recipe-url-information'" />
         <label>Publisher</label>
-        <input value="PUBLISHER NAME" required name="publisher" type="text" />
-        <label>Prep time</label>
-        <input value="60" required name="cookingTime" type="number" />
+        <input value="" required name="publisher" type="text" placeholder="Publisher name" />
+        <label>Cooking time</label>
+        <input value="0" required name="cookingTime" type="number" />
         <label>Servings</label>
         <input value="1" required name="servings" type="number" />
       </div>
@@ -271,9 +272,9 @@
         <input value="0.5,kg,Rice" type="text" required name="ingredient-1"
           placeholder="Format: 'Quantity,Unit,Description'" />
         <label>Ingredient 2</label>
-        <input value="1,,Avocado" type="text" name="ingredient-2" placeholder="Format: 'Quantity,Unit,Description'" />
+        <input value="" type="text" name="ingredient-2" placeholder="Format: 'Quantity,Unit,Description'" />
         <label>Ingredient 3</label>
-        <input value=",,salt" type="text" name="ingredient-3" placeholder="Format: 'Quantity,Unit,Description'" />
+        <input value="" type="text" name="ingredient-3" placeholder="Format: 'Quantity,Unit,Description'" />
         <label>Ingredient 4</label>
         <input type="text" name="ingredient-4" placeholder="Format: 'Quantity,Unit,Description'" />
         <label>Ingredient 5</label>
