@@ -8,3 +8,4 @@ export const MODAL_CLOSE_SEC = 1.5;
 
 /// API DATABASE///////////////////
 // https://forkify-api.herokuapp.com/v2
+//
