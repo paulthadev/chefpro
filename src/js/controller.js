@@ -1,19 +1,19 @@
-"strict mode";
-import { async } from "regenerator-runtime";
-import { MODAL_CLOSE_SEC } from "./config.js";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-import * as model from "./model.js";
-import recipeViews from "./views/recipeViews.js";
-import searchViews from "./views/searchViews.js";
-import resultsView from "./views/resultsView.js";
-import paginationView from "./views/paginationView.js";
-import bookmarksViews from "./views/bookmarksView.js";
-import addRecipeView from "./views/addRecipeView.js";
+'strict mode';
+import { async } from 'regenerator-runtime';
+import { MODAL_CLOSE_SEC } from './config.js';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import * as model from './model.js';
+import recipeViews from './views/recipeViews.js';
+import searchViews from './views/searchViews.js';
+import resultsView from './views/resultsView.js';
+import paginationView from './views/paginationView.js';
+import bookmarksViews from './views/bookmarksView.js';
+import addRecipeView from './views/addRecipeView.js';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
+if (module.hot) {
+  module.hot.accept();
+}
 
 const controlRecipes = async () => {
   try {
@@ -110,7 +110,7 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksViews.render(model.state.bookmark);
 
     // Change ID in Url
-    window.history.pushState(null, "", `#${model.state.recipe.id}`);
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
     // close Modal Window
     setTimeout(function () {
@@ -118,7 +118,7 @@ const controlAddRecipe = async function (newRecipe) {
     }, MODAL_CLOSE_SEC * 1000);
   } catch (error) {
     addRecipeView.renderError(error.message);
-    console.error("💥", error);
+    console.error('💥', error);
   }
 };
 

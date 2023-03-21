@@ -4,6 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 2rem 0;
+  @media screen and (max-width: 550px) {
+    padding-left: 1rem;
+  }
+  @media screen and (max-width: 869px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__center {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      padding: 1rem;
+      padding-bottom: 3rem;
+      margin: 0 auto;
+    }
+  }
 
   &__logo {
     margin-left: 4rem;
@@ -59,6 +78,12 @@
 .nav {
   align-self: stretch;
   margin-right: 2.5rem;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem;
+    // margin-bottom: 3rem;
+  }
 
   &__list {
     list-style: none;
