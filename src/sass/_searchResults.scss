@@ -2,6 +2,8 @@
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
+  margin-top: 6rem;
+  background-color: white;
 }
 
 .results {
@@ -14,7 +16,7 @@
   padding: 0 3.5rem;
 
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
