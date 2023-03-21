@@ -10,7 +10,6 @@
   transition: all 0.2s;
   justify-content: center;
 
-
   &:hover {
     transform: scale(1.05);
   }
@@ -155,7 +154,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 0.3rem;
+    margin-right: 1rem;
   }
 }
 
