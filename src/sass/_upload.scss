@@ -6,24 +6,28 @@
   width: 100rem;
   background-color: white;
   border-radius: 9px;
-    @include respond (tab-port){
+  @include respond(tab-port) {
     width: 70rem;
   }
-  @include respond (phone){
+  @include respond(phone) {
     width: 50rem;
   }
-  @media screen and (max-width:415px){
-    width: 40rem;
+  @media screen and (max-width: 415px) {
+    width: 42rem;
   }
-  @media screen and  (max-width:320px){
+  @media screen and (max-width: 320px) {
     width: 38rem;
   }
   background-color: white;
   border-radius: 9px;
 
   padding: 5rem 6rem;
-  @include respond (phone){
+  @include respond(phone) {
     padding: 3rem 4rem;
+  }
+
+  @media screen and (max-width: 380px) {
+    padding: 3rem 1.6rem;
   }
 
   padding: 5rem 6rem;
@@ -65,7 +69,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
-   @include respond(tab-port){
+  @include respond(tab-port) {
     display: flex;
     flex-direction: column;
     height: 50rem;

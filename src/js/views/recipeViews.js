@@ -44,6 +44,7 @@ class RecipeView extends Views {
         </figure>
 
         <div class="recipe__details">
+        <div class="recipe--info-grouping">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
               <use href="${icons}#icon-clock"></use>
@@ -53,6 +54,7 @@ class RecipeView extends Views {
             }</span>
             <span class="recipe__info-text">minutes</span>
           </div>
+
           <div class="recipe__info">
             <svg class="recipe__info-icon">
               <use href="${icons}#icon-users"></use>
@@ -79,6 +81,7 @@ class RecipeView extends Views {
               </button>
             </div>
           </div>
+        </div>
 
           <div class="recipe__user-generated ${this._data.key ? "" : "hidden"}">
             <svg> <use href="${icons}#icon-user"></use></svg> 

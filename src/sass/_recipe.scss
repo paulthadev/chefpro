@@ -1,6 +1,11 @@
 .recipe {
   background-color: $color-grey-light-1;
 
+  .recipe--info-grouping {
+    @media screen and (min-width: 400px) {
+      display: flex;
+    }
+  }
   // margin-top: 6rem;
 
   ///////////
@@ -12,7 +17,7 @@
     transform-origin: top;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       height: 100%;
       width: 100%;
