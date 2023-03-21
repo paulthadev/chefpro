@@ -10,6 +10,10 @@ ChefPro is a recipe web app using the Forkify API to allow users to search, view
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8613ee7a-b7e6-4a9e-be15-0a177c05ae96/deploy-status)](https://app.netlify.com/sites/chefpro/deploys)
 
+## Overview
+
+![overview](https://github.com/fadayopaul/chefpro/blob/main/overview.png?raw=true)
+
 ### Technologies used
 
 This app is built with pure vanilla JavaScript along with HTML and SCSS. It uses webpack as module bundler and NPM as package manager.
@@ -25,8 +29,6 @@ This app is built with pure vanilla JavaScript along with HTML and SCSS. It uses
 - [Webpack](https://webpack.js.org/)
 - [NPM](https://www.npmjs.com/)
 - [Forkify-API](https://forkify-api.herokuapp.com/v2)
-
-
 
 ### Ways to reproduce
 
