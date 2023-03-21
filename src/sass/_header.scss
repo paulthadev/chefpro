@@ -6,7 +6,7 @@
   justify-content: space-between;
   margin: 2rem 0;
   @media screen and (max-width: 550px) {
-    padding-left: 1rem;
+    // padding-left: 1rem;
   }
   @media screen and (max-width: 869px) {
     flex-direction: column;
@@ -16,9 +16,10 @@
     display: flex;
     width: 70%;
     justify-content: space-between;
+    padding: 1rem;
     @media screen and (max-width: 900px) {
       width: 100%;
-      padding: 1rem;
+      padding: 3rem;
       padding-bottom: 3rem;
       margin: 0 auto;
     }
@@ -26,8 +27,11 @@
 
   &__logo {
     margin-left: 4rem;
-    height: 5.5rem;
+    height: 6rem;
     display: block;
+    @media screen and (max-width:900px){
+      margin-left: 0;
+    }
   }
 }
 
@@ -38,7 +42,10 @@
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
-
+  position: relative;
+  @include respond(tab-port){
+    height: 4rem;
+  }
   &:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
@@ -51,6 +58,12 @@
     color: inherit;
     font-size: 1.7rem;
     width: 30rem;
+    // padding: 0;
+    @media screen and (max-width: 450px) {
+      width: 15rem !important;
+      // margin-right: 7rem;
+      // height: 20px;
+    }
 
     &:focus {
       outline: none;
@@ -72,6 +85,19 @@
   &__btn {
     font-weight: 600;
     font-family: inherit;
+    @include respond(phone) {
+      // position: absolute;
+      border-radius: 2rem;
+      padding: 0rem 2rem;
+      font-size: 1.3rem;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 416px) {
+      & span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -110,6 +136,10 @@
 
     display: flex;
     align-items: center;
+    @media screen and (max-width: 485px) {
+      padding: 0 1.3rem;
+      font-size: 1.2rem;
+    }
 
     svg {
       height: 2.4rem;

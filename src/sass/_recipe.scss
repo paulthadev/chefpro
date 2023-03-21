@@ -1,6 +1,8 @@
 .recipe {
   background-color: $color-grey-light-1;
 
+  // margin-top: 6rem;
+
   ///////////
   // FIGURE
   &__fig {
@@ -68,6 +70,13 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+    @media screen and (max-width: 800px) {
+      padding: 5rem 4rem 3rem;
+    }
+
+    @media screen and (max-width: 465px) {
+      padding: 5rem 2rem 2.5rem 2em;
+    }
   }
 
   &__info {
@@ -78,6 +87,9 @@
 
     &:not(:last-child) {
       margin-right: 4.5rem;
+      @media screen and (max-width: 410px) {
+        margin-right: 1.4rem;
+      }
     }
   }
 
@@ -111,10 +123,12 @@
 
     margin-left: auto;
     margin-right: 1.75rem;
+    @include respond(phone) {
+      margin-right: 1rem;
+    }
 
     svg {
       height: 2.25rem;
-      width: 2.25rem;
       fill: $color-primary;
     }
   }
@@ -136,6 +150,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem 3rem;
     list-style: none;
+    @media screen and (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__ingredient {
@@ -171,6 +189,9 @@
     text-align: center;
     margin-bottom: 3.5rem;
     color: $color-grey-dark-2;
+    @media screen and (max-width: 550px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__publisher {
