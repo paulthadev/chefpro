@@ -145,7 +145,7 @@
   ///////////
   // INGREDIENTS
   &__ingredients {
-    padding: 5rem 8rem;
+    padding: 4rem 8rem;
     font-size: 1.6rem;
     line-height: 1.4;
     background-color: $color-grey-light-2;
@@ -186,7 +186,7 @@
   ///////////
   // DIRECTIONS
   &__directions {
-    padding: 5rem 10rem;
+    padding: 2rem 10rem;
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column;
@@ -200,6 +200,14 @@
     color: $color-grey-dark-2;
     @media screen and (max-width: 550px) {
       font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      margin-bottom: 1rem;
     }
   }
 

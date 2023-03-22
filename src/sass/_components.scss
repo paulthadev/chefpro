@@ -165,6 +165,14 @@
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   text-align: center;
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-bottom: 1.5rem;
+  }
   // transform: skewY(-3deg);
 }
 
