@@ -180,7 +180,6 @@
 .link:visited {
   color: $color-grey-dark-2;
 }
-
 .spinner {
   margin: 5rem auto;
   text-align: center;
@@ -193,6 +192,13 @@
   }
 }
 
+@media screen and (min-width: 755px) {
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+  }
+}
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -202,7 +208,6 @@
     transform: rotate(360deg);
   }
 }
-
 .message,
 .error {
   max-width: 40rem;
