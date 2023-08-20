@@ -6,9 +6,8 @@ ChefPro is a recipe web app using the Forkify API to allow users to search, view
 
 ### Live Preview
 
-✅[Live Preview](https://chefpro.netlify.app/)
+✅[Live Preview](https://chefpro.vercel.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8613ee7a-b7e6-4a9e-be15-0a177c05ae96/deploy-status)](https://app.netlify.com/sites/chefpro/deploys)
 
 ## Overview
 
