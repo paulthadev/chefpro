@@ -11,7 +11,7 @@ ChefPro is a recipe web app using the Forkify API to allow users to search, view
 
 ## Overview
 
-![overview](https://github.com/fadayopaul/chefpro/blob/main/overview.png?raw=true)
+![overview](https://github.com/paulthadev/chefpro/blob/main/overview.png?raw=true)
 
 ### Technologies used
 
@@ -56,7 +56,7 @@ Start with the latest version of NPM to avoid any errors:
 1. Get a free API Key at [Forkify API_KEY](https://forkify-api.herokuapp.com/v2)
 2. Clone the repo
    ```sh
-   git clone https://github.com/fadayopaul/foodrecipy.git
+   git clone https://github.com/paulthadev/foodrecipy.git
    ```
 3. Install NPM packages
    ```sh
@@ -85,7 +85,7 @@ _For more examples, please refer to the [Documentation](https://forkify-api.hero
 
 ## Roadmap
 
-See the [open issues](https://github.com/fadayopaul/chefpro/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/paulthadev/chefpro/issues) for a list of proposed features (and known issues).
 
 ### Proposed Features
 
